@@ -1,0 +1,1330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ace Locksmiths LLC | Professional Locksmith Services in Portland, OR</title>
+  <meta name="description" content="Ace Locksmiths LLC provides automotive, residential, and commercial locksmith services in Portland, Oregon. Call today for professional locksmith assistance.">
+  <meta name="theme-color" content="#101010">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #101010;
+      --dark: #171717;
+      --dark-card: #202020;
+      --gold: #c9a66b;
+      --gold-light: #e3c58f;
+      --cream: #f7f3eb;
+      --white: #ffffff;
+      --muted: #b7b2a9;
+      --border: rgba(201, 166, 107, .25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 55px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 18px;
+    }
+
+    .section-heading p,
+    .muted {
+      color: var(--muted);
+    }
+
+    .gold-text {
+      color: var(--gold-light);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: #15120d;
+      font-weight: 700;
+      letter-spacing: .3px;
+      transition: .3s ease;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-light);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(16, 16, 16, .96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .site-logo {
+      width: auto;
+      height: 58px;
+      max-width: 210px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #e8e2d8;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-call {
+      color: var(--gold-light) !important;
+      border: 1px solid var(--gold);
+      padding: 10px 17px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--gold-light);
+      font-size: 25px;
+      padding: 5px 12px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(90deg, rgba(10,10,10,.96), rgba(10,10,10,.78) 55%, rgba(10,10,10,.38)),
+        url("https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=2000&q=85") center/cover;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, var(--black), transparent 35%);
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 100px 0 130px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      color: #d0c9bd;
+      font-size: 17px;
+      max-width: 630px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-note {
+      margin-top: 35px;
+      color: var(--gold-light);
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    /* Highlights */
+
+    .highlights {
+      background: #191919;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .highlight {
+      padding: 28px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .highlight:last-child {
+      border-right: 0;
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--gold-light);
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .highlight span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    .about-image::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 100px;
+      height: 100px;
+      border-top: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 18px 0;
+    }
+
+    .about-points {
+      list-style: none;
+      margin: 25px 0 30px;
+    }
+
+    .about-points li {
+      margin: 12px 0;
+      color: #e9e1d4;
+    }
+
+    .about-points li::before {
+      content: "✦";
+      color: var(--gold);
+      margin-right: 12px;
+    }
+
+    /* Services */
+
+    .services {
+      background: #171717;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: .35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-9px);
+      border-color: var(--gold);
+      box-shadow: 0 18px 40px rgba(0,0,0,.3);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .service-content {
+      padding: 28px;
+    }
+
+    .service-content h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+      color: var(--gold-light);
+    }
+
+    .service-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .text-link {
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .text-link:hover {
+      color: white;
+    }
+
+    /* Call to action */
+
+    .cta {
+      background:
+        linear-gradient(rgba(10,10,10,.88), rgba(10,10,10,.9)),
+        url("https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1800&q=80") center/cover fixed;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cta-content {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin: 18px auto 30px;
+    }
+
+    /* Reviews */
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review-card {
+      padding: 30px;
+      background: #1d1d1d;
+      border: 1px solid var(--border);
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .review-card p {
+      color: #d2ccc2;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .review-card h3 {
+      font-size: 19px;
+      color: var(--gold-light);
+    }
+
+    .review-card span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* FAQ */
+
+    .faq {
+      background: #171717;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 22px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border: 0;
+      background: transparent;
+      color: var(--cream);
+      text-align: left;
+      font: 600 17px "DM Sans", sans-serif;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      color: var(--gold);
+      font-size: 24px;
+    }
+
+    .faq-answer {
+      display: none;
+      color: var(--muted);
+      padding: 0 5px 22px;
+      font-size: 14px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+      animation: fadeUp .3s ease;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: #1c1c1c;
+      border: 1px solid var(--border);
+      padding: 35px;
+    }
+
+    .contact-info h3 {
+      font-size: 27px;
+      margin-bottom: 20px;
+      color: var(--gold-light);
+    }
+
+    .contact-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: #e5ded2;
+      overflow-wrap: anywhere;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 440px;
+      border: 1px solid var(--border);
+      filter: grayscale(85%) contrast(1.05);
+    }
+
+    /* Footer */
+
+    footer {
+      background: #0b0b0b;
+      border-top: 1px solid var(--border);
+      padding: 65px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 55px;
+      padding-bottom: 45px;
+    }
+
+    .footer-logo {
+      height: 65px;
+      max-width: 220px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .footer-about p {
+      color: var(--muted);
+      max-width: 360px;
+      font-size: 14px;
+    }
+
+    .footer-column h3 {
+      font-size: 21px;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin: 10px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #8e887f;
+      font-size: 12px;
+    }
+
+    /* Floating call button */
+
+    .floating-call {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      padding: 14px 20px;
+      background: var(--gold);
+      color: #15120d;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(0,0,0,.35);
+      transition: .3s;
+    }
+
+    .floating-call:hover {
+      background: var(--gold-light);
+      transform: translateY(-4px);
+    }
+
+    /* Animations */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 18px;
+      }
+
+      .about-grid {
+        gap: 40px;
+      }
+
+      .service-grid,
+      .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        min-height: 72px;
+      }
+
+      .site-logo {
+        height: 46px;
+        max-width: 170px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: #111;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+      }
+
+      .nav-call {
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .hero {
+        min-height: 600px;
+        background-position: 60% center;
+      }
+
+      .hero-content {
+        padding: 85px 0 110px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .highlight:last-child {
+        border-bottom: 0;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image img {
+        height: 340px;
+      }
+
+      .service-grid,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .map-frame {
+        height: 340px;
+      }
+
+      .cta {
+        background-attachment: scroll;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand" aria-label="Ace Locksmiths LLC Home">
+        <img
+          src="https://ace24hrlocksmith.com/wp-content/uploads/2025/05/232cf1e4-17cf-4fdb-bbe7-ac7c7eb73730-1.png"
+          alt="Ace Locksmiths LLC Logo"
+          class="site-logo"
+        >
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-call" href="tel:+15033815799">Call Now</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Professional Locksmith Assistance</span>
+
+          <h1>
+            Security Solutions You Can
+            <span class="gold-text">Count On</span>
+          </h1>
+
+          <p>
+            From automotive lockouts to residential and commercial
+            locksmith needs, Ace Locksmiths LLC is here to help with
+            professional service in Portland, Oregon.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="tel:+15033815799" class="btn">Call (503) 381-5799</a>
+            <a href="#services" class="btn btn-outline">Explore Services</a>
+          </div>
+
+          <div class="hero-note">
+            AUTOMOTIVE · RESIDENTIAL · COMMERCIAL
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights">
+      <div class="container highlight-grid">
+        <div class="highlight">
+          <strong>Automotive</strong>
+          <span>Vehicle locksmith assistance</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Residential</strong>
+          <span>Home lock and key services</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Commercial</strong>
+          <span>Business security solutions</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+            alt="Secure and welcoming residential property"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">About Our Company</span>
+
+          <h2>
+            Reliable Locksmith Help for
+            <span class="gold-text">Everyday Security Needs</span>
+          </h2>
+
+          <p>
+            Ace Locksmiths LLC provides locksmith assistance for
+            automotive, residential, and commercial customers in
+            Portland, Oregon. Whether you need help with a vehicle
+            lockout, a home lock, or a business security concern,
+            professional assistance matters.
+          </p>
+
+          <p>
+            Our goal is to make getting locksmith help straightforward.
+            We focus on clear communication, practical solutions,
+            and respectful customer service throughout the process.
+          </p>
+
+          <ul class="about-points">
+            <li>Automotive locksmith assistance</li>
+            <li>Residential lock and key solutions</li>
+            <li>Commercial locksmith services</li>
+            <li>Customer-focused communication</li>
+          </ul>
+
+          <a href="#contact" class="btn">Contact Our Team</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">What We Do</span>
+          <h2>Our <span class="gold-text">Locksmith Services</span></h2>
+          <p>
+            Explore locksmith solutions for your vehicle, home,
+            and commercial property.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <!-- Automotive -->
+          <article class="service-card reveal">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=da7d8455c0c16c25eae820a99e8d348cbfc89a17-2855894-images-thumbs&n=13"
+              alt="Automotive locksmith service"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <h3>Automotive Locksmith</h3>
+              <p>
+                Need assistance with a vehicle lockout or car key
+                concern? Get in touch with our team to discuss
+                automotive locksmith assistance.
+              </p>
+              <a href="tel:+15033815799" class="text-link">Request Assistance →</a>
+            </div>
+          </article>
+
+          <!-- Residential -->
+          <article class="service-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+              alt="Residential home security and entry"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <h3>Residential Locksmith</h3>
+              <p>
+                Protect your home with locksmith assistance for
+                residential lock and key needs. Contact us to
+                discuss your property's security requirements.
+              </p>
+              <a href="tel:+15033815799" class="text-link">Request Assistance →</a>
+            </div>
+          </article>
+
+          <!-- Commercial -->
+          <article class="service-card reveal">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=851d9af8343f128a899694a49383f7d3543865b3-12540799-images-thumbs&n=13"
+              alt="Commercial locksmith service"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <h3>Commercial Locksmith</h3>
+              <p>
+                Businesses need dependable access and security.
+                Contact Ace Locksmiths LLC to discuss locksmith
+                solutions for your commercial property.
+              </p>
+              <a href="tel:+15033815799" class="text-link">Request Assistance →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="container cta-content reveal">
+        <span class="eyebrow">Need Locksmith Assistance?</span>
+
+        <h2>
+          Get in Touch With
+          <span class="gold-text">Ace Locksmiths LLC</span>
+        </h2>
+
+        <p>
+          Tell us what kind of locksmith assistance you need.
+          Contact our team to discuss your situation and the
+          available service options.
+        </p>
+
+        <a href="tel:+15033815799" class="btn">Call (503) 381-5799</a>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Customer Feedback</span>
+          <h2>What Customers <span class="gold-text">Say About Us</span></h2>
+          <p>
+            Customer experiences shared about the service and support
+            provided by Ace Locksmiths LLC.
+          </p>
+        </div>
+
+        <div class="review-grid">
+
+          <article class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Came and unlocked our car for us late at night.
+              They were so incredibly helpful!”
+            </p>
+            <h3>Persephone Edwards</h3>
+            <span>Customer Review</span>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Ben came out within an hour of my call and was
+              incredibly helpful and expedient.”
+            </p>
+            <h3>Megan Banta</h3>
+            <span>Customer Review</span>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="stars">★★★★★</div>
+            <p>
+              “Very respectful and communicative. Highly recommend!
+              Worked with me about location and price details as well.”
+            </p>
+            <h3>Myah</h3>
+            <span>Customer Review</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Helpful Information</span>
+          <h2>Frequently Asked <span class="gold-text">Questions</span></h2>
+          <p>
+            Find answers to common questions about our locksmith
+            services and how to contact our team.
+          </p>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What types of locksmith services do you offer?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Ace Locksmiths LLC offers automotive, residential,
+              and commercial locksmith assistance. Contact us
+              to discuss the specific service you need.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I contact you for a car lockout?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. Contact our team at (503) 381-5799 to discuss
+              your vehicle lockout and available assistance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you provide residential locksmith services?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. We provide residential locksmith assistance.
+              Call us to explain your home lock or key requirements.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can businesses contact you for locksmith help?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. Commercial customers can contact Ace Locksmiths LLC
+              to discuss locksmith needs for their business properties.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How can I request locksmith assistance?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Call (503) 381-5799 or email
+              walkerbenyosafe@gmail.com to get in touch with
+              Ace Locksmiths LLC.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Contact <span class="gold-text">Our Team</span></h2>
+          <p>
+            Have a locksmith question or need service information?
+            Reach out using the contact details below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h3>Ace Locksmiths LLC</h3>
+
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:+15033815799">(503) 381-5799</a>
+            </div>
+
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:walkerbenyosafe@gmail.com">
+                walkerbenyosafe@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <strong>Address</strong>
+              <span>5129 SE 30th Ave, Portland, OR 97202</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Website</strong>
+              <a href="https://ace24hrlocksmith.com/" target="_blank" rel="noopener">
+                ace24hrlocksmith.com
+              </a>
+            </div>
+
+            <div style="margin-top:25px;">
+              <a href="tel:+15033815799" class="btn">Call Our Team</a>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <iframe
+              class="map-frame"
+              src="https://www.google.com/maps?q=5129%20SE%2030th%20Ave%2C%20Portland%2C%20OR%2097202&output=embed"
+              title="Ace Locksmiths LLC location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="#home" aria-label="Ace Locksmiths LLC Home">
+            <img
+              src="https://ace24hrlocksmith.com/wp-content/uploads/2025/05/232cf1e4-17cf-4fdb-bbe7-ac7c7eb73730-1.png"
+              alt="Ace Locksmiths LLC Logo"
+              class="footer-logo"
+              loading="lazy"
+            >
+          </a>
+
+          <p>
+            Ace Locksmiths LLC provides automotive, residential,
+            and commercial locksmith assistance in Portland, Oregon.
+            Contact our team to discuss your locksmith needs.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Details</h3>
+          <ul>
+            <li><a href="tel:+15033815799">(503) 381-5799</a></li>
+            <li><a href="mailto:walkerbenyosafe@gmail.com">Email Us</a></li>
+            <li>Portland, Oregon</li>
+            <li>
+              <a href="https://ace24hrlocksmith.com/" target="_blank" rel="noopener">
+                Official Website
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Ace Locksmiths LLC. All Rights Reserved.</span>
+        <span>Professional Locksmith Services in Portland, Oregon</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:+15033815799" class="floating-call">
+    ☎ Call Now
+  </a>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Close mobile menu after selecting a section
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isActive = item.classList.contains("active");
+
+        document.querySelectorAll(".faq-item").forEach(faq => {
+          faq.classList.remove("active");
+          faq.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+          faq.querySelector(".faq-question span:last-child").textContent = "+";
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+          button.setAttribute("aria-expanded", "true");
+          button.querySelector("span:last-child").textContent = "−";
+        }
+      });
+    });
+
+    // Scroll reveal animation
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      revealObserver.observe(element);
+    });
+
+    // Dynamic copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
